@@ -102,12 +102,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Running with Docker Compose
 
 1. **Build Docker Image and Run Container**:
-    ```bash
-    docker-compose up --build
-    ```
+
+   ```bash
+   docker-compose up --build
+   ```
 
 2. **Access the Application**:
-    Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the running application.
+   Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the running application.
 
 ---
 
@@ -115,18 +116,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 1. **Build the Docker Image using Dockerfile.dev**:
 
-    ```bash
-    docker build -t nextjs-app -f Dockerfile.dev .
-    ```
+   ```bash
+   docker build -t nextjs-app -f Dockerfile.dev .
+   ```
 
 2. **Running the Docker Container**:
 
-    ```bash
-    docker run -p 3000:3000 nextjs-app
-    ```
+   ```bash
+   docker run -p 3000:3000 nextjs-app
+   ```
 
 3. **Access the Application**:
-    Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the running application.
+   Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the running application.
 
 ---
 
@@ -217,7 +218,7 @@ Whenever you push changes to your GitHub repo, Vercel will automatically redeplo
 
 1. **Open Telegram** and search for the user **@BotFather**.
 2. Start a chat with BotFather and use the `/newbot` command to create a new bot.
-3. Choose a name for your bot.
+3. Choose a name for your bot. //t.me/yovo_website_bot
 4. Set a unique username for your bot (must end with `bot`, e.g., `PortfolioAssistantBot`).
 5. Once your bot is created, BotFather will send you a **Token**. Save this token, as you will need it for your environment variables (e.g., `TELEGRAM_BOT_TOKEN`).
 6. To get your chat ID:
