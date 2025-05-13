@@ -44,3 +44,5 @@ public/assets/
 # Generated files
 *.DS_Store
 *.swp
+
+.next/
