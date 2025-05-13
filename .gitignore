@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+.env
+
+# Temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.ps1
+
+# Log files
+logs/
+*.log
+yarn.lock
+
+# Cache files
+.cache/
+
+# Coverage reports
+coverage/
+
+# Local development files
+public/*.hot-update.*
+public/static/
+public/favicon.ico
+public/assets/
+
+# Storybook files
+.storybook/
+
+# Generated files
+*.DS_Store
+*.swp
