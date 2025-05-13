@@ -152,21 +152,29 @@ Eg:
 
 ```javascript
 export const personalData = {
-  name: "ABU SAID",
+  name: "Yovo Manolov",
   profile: "/profile.png",
-  designation: "Full-Stack Software Developer",
-  description: "My name is ABU SAID....",
-  email: "abusaid7388@gmail.com",
-  phone: "+8801608797655",
-  address: "Dhaka, Bangladesh",
-  github: "https://github.com/said7388",
-  facebook: "https://www.facebook.com/abusaid.riyaz/",
-  linkedIn: "https://www.linkedin.com/in/abu-said-bd/",
-  twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
+  designation: "Software Engineer",
+  description:
+    "Software engineer with 6.5 years of experience with a Bachelor's and Master's degree in Computer \
+  and Software Engineering from Technical University of Sofia. Certified AWS associate developer and \
+  Kubernetes application developer. Worked mainly on Java backend with different architectures: \
+  monolithic, microservices. Passionate about cloud-native technologies. Business domains: banking, \
+  finance, ticket management, gaming/gambling, e-commerce. Team player with no fear of \
+  communication, passionate about software engineering as well as passing knowledge to others.",
+
+  email: "yovo.manolov@gmail.com",
+  phone: "xxx-xxxx-xxxx",
+  address: "Sofia, Bulgaria",
+  github: "https://github.com/YovoManolov",
+  facebook: "x",
+  linkedIn: "https://www.linkedin.com/in/yovo-manolov-472140197/",
+  twitter: "x",
+  stackOverflow: "x",
   leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "...",
+  hackerrank: "https://www.hackerrank.com/said7388",
+  resume:
+    "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
 };
 ```
 
