@@ -1,9 +1,4 @@
 
-
-## View live preview [here](https://abusaid.netlify.app/).
-
----
-
 ## Table of Contents :scroll:
 
 - [Sections](#sections-bookmark)
