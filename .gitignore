@@ -35,7 +35,6 @@ coverage/
 # Local development files
 public/*.hot-update.*
 public/static/
-public/favicon.ico
 public/assets/
 
 # Storybook files
