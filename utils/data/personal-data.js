@@ -1,5 +1,6 @@
 export const personalData = {
   name: "Yovo Manolov",
+  devUsername: "yovo_manolov",
   profile: "/profile.png",
   designation: "Software Engineer",
   description:

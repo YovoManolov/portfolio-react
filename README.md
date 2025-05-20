@@ -148,10 +148,10 @@ export const personalData = {
   linkedIn: "https://www.linkedin.com/in/yovo-manolov-472140197/",
   twitter: "x",
   stackOverflow: "x",
-  leetcode: "https://leetcode.com/said3812/",
-  hackerrank: "https://www.hackerrank.com/said7388",
+  leetcode: "x",
+  hackerrank: "https://www.hackerrank.com/profile/yovo_manolov",
   resume:
-    "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
+    "https://drive.google.com/file/d/1k-4U8MsAh77QUyc6SEyJBBY9bNT1fw6M/view?usp=sharing",
 };
 ```
 
@@ -163,29 +163,20 @@ export const personalData = {
 
 Deploying the app to platforms like Vercel or Netlify is quick and easy.
 
-## Deploying to Vercel:
+## Deploying to AWS Amplify
 
-1. **Sign up or log in** to [Vercel](https://vercel.com/).
-2. Once logged in, click on **"New Project"**.
-3. Select your **GitHub repo** (the one that contains your forked project) and click **Import**.
-4. Configure your environment variables in the Vercel dashboard by adding each key from your `.env` file.
-   - E.g., `NEXT_PUBLIC_GTM`, `NEXT_PUBLIC_APP_URL`, `TELEGRAM_BOT_TOKEN`, etc.
-5. Click on **Deploy**. Vercel will automatically detect your Next.js app and build it.
-6. Once the deployment is complete, you can visit your live website!
+1. Sign up or log in to AWS Amplify.
+2. Navigate to the Amplify Hosting service and click "Get Started".
+3. Connect your GitHub repo (or another Git provider) that contains your project and authorize Amplify to access it.
+4. Choose the appropriate branch and click Next.
+5. Configure your environment variables in the Amplify console under the Build settings.
+6. Add variables from your .env file, such as NEXT_PUBLIC_GTM, NEXT_PUBLIC_APP_URL, TELEGRAM_BOT_TOKEN, etc.
+7. Click on Deploy. AWS Amplify will automatically detect your framework (e.g., Next.js, React) and start the build process.
+8. Once the deployment is complete, Amplify will provide a live URL where your app is hosted.
 
 ### Updating After Deployment
 
-Whenever you push changes to your GitHub repo, Vercel will automatically redeploy the app, keeping your portfolio up-to-date.
-
-## Deploying to Netlify:
-
-1. **Sign up or log in** to [Netlify](https://www.netlify.com/).
-2. In the **Netlify Dashboard**, click **"New site from Git"**.
-3. Connect your **GitHub** account and select your repo.
-4. Configure your environment variables by going to **Site Settings > Build & Deploy > Environment** and adding keys from your `.env` file.
-5. Click **Deploy Site**. Netlify will build and deploy your portfolio.
-
----
+Whenever you push changes to your GitHub repo, AWS Amplify will automatically redeploy your app, keeping your portfolio up-to-date.
 
 # Tutorials :wrench:
 

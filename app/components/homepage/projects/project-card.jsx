@@ -52,8 +52,13 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">{"],"}</span>
           </div>
           <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">My Role:</span>
             <span className="text-orange-400">{project.role}</span>
+            <span className="text-gray-400">,</span>
+          </div>
+          <div>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">Company:</span>
+            <span className="text-orange-400">{project.company}</span>
             <span className="text-gray-400">,</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
