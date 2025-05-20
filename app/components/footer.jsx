@@ -10,10 +10,12 @@ function Footer() {
         <div className="flex justify-center -z-40">
           <div className="absolute top-0 h-[1px] w-1/2  bg-gradient-to-r from-transparent via-violet-500 to-transparent"></div>
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-sm">
             © Developer Portfolio Design by <Link target="_blank" href="https://www.linkedin.com/in/abu-said-bd/" className="text-[#16f2b3]">Abu Said</Link>
-            Modified by <Link target="_blank" href="https://www.linkedin.com/in/yovo-manolov-472140197/" className="text-[#16f2b3]">Yovo Manolov</Link>
+          </p>
+          <p className="text-sm">
+          Modified by <Link target="_blank" href="https://www.linkedin.com/in/yovo-manolov-472140197/" className="text-[#16f2b3]">Yovo Manolov</Link>
           </p>
           <div className="flex items-center gap-5">
             <Link
