@@ -4,7 +4,7 @@ export const personalData = {
   profile: "/profile.png",
   designation: "Software Engineer",
   description:
-    "Software engineer with 6.5 years of experience with a Bachelor's and Master's degree in Computer \
+    "Software engineer with 7 years of experience with a Bachelor's and Master's degree in Computer \
   and Software Engineering from Technical University of Sofia. Certified AWS associate developer and \
   Kubernetes application developer. Worked mainly on Java backend with different architectures: \
   monolithic, microservices. Passionate about cloud-native technologies. Business domains: banking, \
@@ -17,10 +17,9 @@ export const personalData = {
   github: "https://github.com/YovoManolov",
   facebook: "x",
   linkedIn: "https://www.linkedin.com/in/yovo-manolov-472140197/",
-  twitter: "x",
   stackOverflow: "x",
-  leetcode: "https://leetcode.com/said3812/",
-  hackerrank: "https://www.hackerrank.com/said7388",
+  leetcode: "x",
+  hackerrank: "https://www.hackerrank.com/yovo_manolov",
   resume:
     "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing",
 };

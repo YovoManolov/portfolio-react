@@ -68,44 +68,57 @@ async function sendEmail(payload, message) {
 };
 
 export async function POST(request) {
-  try {
-    const payload = await request.json();
-    const { name, email, message: userMessage } = payload;
-    const token = process.env.TELEGRAM_BOT_TOKEN;
-    const chat_id = process.env.TELEGRAM_CHAT_ID;
-
-    // Validate environment variables
-    if (!token || !chat_id) {
+    try {
+      const payload = await request.json();
+      const { name, email, message: userMessage } = payload;
+      const token = process.env.TELEGRAM_BOT_TOKEN;
+      const chat_id = process.env.TELEGRAM_CHAT_ID;
+  
+      // Validate environment variables
+      if (!token || !chat_id) {
+        return NextResponse.json({
+          success: false,
+          message: 'Telegram token or chat ID is missing.',
+        }, { status: 400, headers: getCorsHeaders() });
+      }
+  
+      const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
+  
+      // Send email first
+      const emailSuccess = await sendEmail(payload, message);
+      
+      let telegramSuccess = false;
+      if (emailSuccess) {
+        telegramSuccess = await sendTelegramMessage(token, chat_id, message);
+      }
+  
+      return NextResponse.json({
+        success: emailSuccess && telegramSuccess,
+        message: emailSuccess && telegramSuccess
+          ? 'Message and email sent successfully!'
+          : 'Email or Telegram notification failed.',
+      }, { status: emailSuccess && telegramSuccess ? 200 : 500, headers: getCorsHeaders() });
+  
+    } catch (error) {
+      console.error('API Error:', error.message);
       return NextResponse.json({
         success: false,
-        message: 'Telegram token or chat ID is missing.',
-      }, { status: 400 });
+        message: 'Server error occurred.',
+      }, { status: 500, headers: getCorsHeaders() });
     }
+  };
+  
+  // Function to handle CORS headers
+  function getCorsHeaders() {
+    return {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    };
+  };
+  
+  // Preflight request handler
+  export async function OPTIONS() {
+    return NextResponse.json(null, { status: 204, headers: getCorsHeaders() });
+  };
 
-    const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
-
-    // Send Telegram message
-    const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
-
-    // Send email
-    const emailSuccess = await sendEmail(payload, message);
-
-    if (telegramSuccess && emailSuccess) {
-      return NextResponse.json({
-        success: true,
-        message: 'Message and email sent successfully!',
-      }, { status: 200 });
-    }
-
-    return NextResponse.json({
-      success: false,
-      message: 'Failed to send message or email.',
-    }, { status: 500 });
-  } catch (error) {
-    console.error('API Error:', error.message);
-    return NextResponse.json({
-      success: false,
-      message: 'Server error occurred.',
-    }, { status: 500 });
-  }
-};
