@@ -2,17 +2,30 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import BlogCard from "../components/homepage/blog/blog-card";
+import axios from "axios";
 
 async function getBlogs() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
+  try {
+    const res = await axios.get(`https://dev.to/api/articles?username=${personalData.devUsername}`);
+    
+    if (res.status !== 200) {
+      throw new Error(`Failed to fetch data: ${res.status} ${res.statusText}`);
+    }
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    const data = res.data;
+
+    if (!Array.isArray(data)) {
+      throw new Error("Unexpected response format");
+    }
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return []; // Return an empty array instead of failing completely
   }
+}
 
-  const data = await res.json();
-  return data;
-};
+
 
 async function page() {
   const blogs = await getBlogs();
@@ -23,7 +36,7 @@ async function page() {
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-2xl rounded-md">
-            All Blog
+            All Blogs
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
