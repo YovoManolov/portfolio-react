@@ -23,7 +23,7 @@ async function getData() {
       throw new Error("Unexpected response format");
     }
 
-    const filtered = data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
+    const filtered = data.filter((item) => item?.cover_image || item?.social_image).sort(() => Math.random() - 0.5);
 
     return filtered;
   } catch (error) {
