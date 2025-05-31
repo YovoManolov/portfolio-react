@@ -3,7 +3,7 @@ export const projectsData = [
         id: 1,
         name: 'Swiss Telecom',
         description: "Maintanance and moderinization of the telecom software app, both backend and frontend. The app is dealing with alerts, outages, notifications. It maintains reliability of the entire telecom network.",
-        tools: ['Java 11', 'Oracle SQL', 'Bitbucket', 'Confluence', "Maven", "JBoss", "PHP", "Sencha ExtJS", "Rest", "SOAP"],
+        tools: ['Java 11', 'Spring Boot','Kafka','Oracle SQL', 'Bitbucket', 'Confluence', "Maven", "JBoss", "PHP", "Sencha ExtJS", "Rest", "SOAP"],
         company: 'Infosys,',
         role: 'Technology Lead',
         code: '',
